@@ -1,0 +1,305 @@
+* {
+    font-family: "Montserrat";
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+    margin: 0 0 16px 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+p {
+    color: #979797;
+    margin: 0 0 16px 0;
+    font-size: 24px;
+}
+
+section {
+    padding: 64px 128px;
+}
+
+.btn {
+    background-color: #1CD6CE;
+    color: white;
+    padding: 8px 24px;
+}
+
+.btn:hover
+{
+    background-color: white;
+    color: #1CD6CE;
+    border-radius: 15px;
+    border: 2px solid #1CD6CE;
+}
+
+.btn-alt {
+    background-color: white;
+    color: black;
+    margin-right: 16px;
+    border: 2px solid #1CD6CE;
+}
+
+.btn-alt:hover {
+    background-color: #1CD6CE;
+    color: white;
+    border-radius: 15px;
+    border: 2px solid #1fada6;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 128px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+#header h1 {
+    margin: 0;
+    margin-top: 7px;
+    font-size: 36px;
+}
+
+nav > a {
+    margin-left: 12px;
+}
+
+nav > a:hover {
+    color: #FFC108;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+#main p {
+    margin-bottom: 32px;
+}
+
+#main img {
+    margin-left: 64px;
+}
+
+#main > div {
+    width: 50%;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+#about img {
+    width: 500px;
+}
+
+#about > div {
+    width: 50%;
+}
+
+#about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin-top: 72px;
+}
+
+.about-stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-stats-item div {
+    width: 50px;
+    height: 10px;
+    background-color: #1CD6CE;
+    margin-bottom: 16px;
+}
+
+.projects-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects-header h1 {
+    position: relative;
+}
+
+.projects-header h1::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url("./images/accent1.svg");
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    z-index: -1;
+}
+
+.projects-detail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 128px;
+    margin-top: 72px;
+}
+
+.projects-detail-item {
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projects-detail-item:hover {
+    transform: scale(1.15);
+}
+
+.projects-detail-item:hover img {
+    filter: grayscale(0);
+}
+
+.projects-detail-item img {
+    width: 100%;
+    filter: grayscale(1);
+}
+
+.projects-detail-item h2 {
+    padding: 0 16px;
+}
+
+.projects-detail-item p {
+    font-size: 16px;
+    padding: 0 16px;
+}
+
+#contact h1 {
+    position: relative;
+}
+
+#contact > h1::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: url("./images/accent2.svg");
+    left: -20px;
+    top: -10px;
+    z-index: -1;
+}
+
+.contact-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+    column-gap: 128px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #1CD6CE;
+    padding: 64px 32px;
+}
+
+form h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+
+form button {
+    border: none;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    margin-top: 32px;
+    grid-template-areas:    "name subject"
+                            "email phone"
+                            "message message";
+}
+
+#input-name {
+    grid-area: name;
+}
+
+#input-subject {
+    grid-area: subject;
+}
+
+#input-email {
+    grid-area: email;
+}
+
+#input-phone {
+    grid-area: phone;
+}
+
+#input-message {
+    grid-area: message;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.input-group label {
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+}
+
+.input-group input:focus {
+    border-bottom: 2px solid #1CD6CE;
+}
+
+footer {
+    padding: 16px 128px;
+    background-color: #1CD6CE;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    color: white;
+    width: 50%;
+}
+
+.social-icon {
+    display: flex;
+    gap: 32px;
+}
